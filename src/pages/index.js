@@ -4,13 +4,16 @@ import Header from "../components/header"
 
 export default function Home() {
   return (
-    <div style={{ color: `purple` }}>
+    <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
       <Link to="/contact/">Contact</Link>
       <Link to="/about-css-modules/" style={{ marginLeft: "10px" }}>
         About CSS Modules
       </Link>
-      <Header headerText="Hello Gatsby!" />
-      <p>What a world.</p>
+      <Header headerText="Hi! I'm building a fake Gatsby site as part of a tutorial!" />
+      <p>
+        What do I like to do? Lots of course but definitely enjoy building
+        websites.
+      </p>
       <img src="https://source.unsplash.com/random/400x400" alt="" />
     </div>
   )
