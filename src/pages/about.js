@@ -5,9 +5,10 @@ import Layout from "../components/layout"
 export default function About() {
   return (
     <Layout>
-      <Header headerText="About me" />
+      <Header headerText="About Pandas Eating Lots" />
       <p>
-        I’m good enough, I’m smart enough, and gosh darn it, people like me!
+        We're the only site running on your computer dedicated to showing the
+        best photos and videos of pandas eating lots of food.
       </p>
     </Layout>
   )
