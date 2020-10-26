@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
+import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
+    <Layout>
       <Link to="/about/">About</Link>
       <Link to="/about-css-modules/" style={{ marginLeft: "10px" }}>
         About CSS Modules
@@ -18,6 +19,6 @@ export default function Home() {
         websites.
       </p>
       <img src="https://source.unsplash.com/random/400x400" alt="" />
-    </div>
+    </Layout>
   )
 }
