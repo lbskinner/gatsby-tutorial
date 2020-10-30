@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import { css } from "@emotion/core"
-
+import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 
 // used for tutorial part II
@@ -11,7 +10,21 @@ import { rhythm } from "../utils/typography"
 //   </li>
 // )
 
+// For now, keep in mind that only pages can make page queries. 
+// Non-page components, such as Layout, can use StaticQuery. 
+
 export default function Layout({ children }) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
   return (
     <div
       css={css`
@@ -29,7 +42,7 @@ export default function Layout({ children }) {
             font-style: normal;
           `}
         >
-          Pandas Eating Lots
+          {data.site.siteMetadata.title}
         </h3>
       </Link>
       <Link
